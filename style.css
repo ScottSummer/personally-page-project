@@ -9,7 +9,7 @@
 }
 
 :root {
-  --flamecolor: linear-gradient(97.1deg, #c41740 4.8%, #ea9c28 100%);
+  --flamecolor: linear-gradient(90deg, #c41740 20%, #ea9c28 100%);
   --logo: #1e2834;
   --heading: #1d2939;
 }
@@ -25,6 +25,8 @@
   box-shadow: 0px 4px 70px rgba(30, 40, 52, 0.08);
   width: 100%;
   height: 85px;
+  box-sizing: inherit;
+  z-index: 2;
 }
 
 .left-side-nav {
@@ -79,6 +81,7 @@
   background: var(--heading);
   color: white;
   border-radius: 8px;
+  border: 0.5px solid black;
   margin-left: 10vw;
   transition: background-color 0.8s ease;
 }
@@ -86,7 +89,7 @@
 .sub-button:hover {
   background: white;
   color: black;
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 .hamburger-icon {
@@ -123,4 +126,215 @@
 /* NAVBAR END */
 
 /* SECTİONS START */
-/* MANİN SECTİON START */
+/* MAIN SECTION START */
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.section1 {
+  display: flex;
+  box-sizing: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 30vw;
+}
+
+.section1 > #meet-button {
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+#handIcon {
+  font-size: 0.8vw;
+}
+
+.section1 > h1 {
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  background: var(--flamecolor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section1 > h4 {
+  font-weight: lighter;
+  font-size: 1.3vw;
+  text-align: center;
+  width: 70%;
+  color: #475467;
+}
+
+.section2 {
+  background: #f2f4f7;
+  display: flex;
+  box-sizing: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4vw;
+  height: 100%;
+  gap: 20px;
+}
+
+.dailyDigest {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 2vw;
+  justify-content: space-around;
+  padding: 0 6vw;
+  padding-top: 5vw;
+  padding-bottom: 1vw;
+}
+
+.dailyDigest > h5 {
+  color: black;
+  font-size: 1.3vw;
+  font-weight: bolder;
+}
+
+#viewAll {
+  color: #1e2834;
+  font-weight: bolder;
+  padding: 0.4vw;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.container {
+  display: flex;
+  box-sizing: inherit;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  max-width: 50%;
+}
+
+.containerText {
+  display: flex;
+  flex: 2;
+  box-sizing: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+}
+
+.containerText p:first-child {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 30px;
+  font-size: 0.6vw;
+}
+
+.containerText > h5 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3vw;
+  margin-bottom: 20px;
+}
+
+.containerText p:last-child {
+  color: #475467;
+  font-size: 0.9vw;
+}
+
+.containerImg {
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: inherit;
+}
+/* MAIN SECTION ENDS */
+/* FOOTER SECTION STARTS */
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: inherit;
+  width: 100%;
+  border-bottom: 0px 4px 70px rgba(30, 40, 52, 0.08);
+}
+
+.footer-sec {
+  display: flex;
+  box-sizing: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+  margin: 2vw;
+  gap: 10px;
+}
+
+.footer-sec > h1 {
+  font-weight: bold;
+  font-size: 2vw;
+  background: var(--flamecolor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.footer-sec > h5 {
+  font-size: 1vw;
+  color: #475467;
+  font-weight: lighter;
+  padding-bottom: 1vw;
+}
+
+.email-sec {
+  padding-bottom: 1vw;
+}
+
+.email-sec > #email {
+  border: 2px solid var(--logo);
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.email-sec > #sub-but {
+  border: 2px solid var(--logo);
+  background: var(--logo);
+  color: white;
+  padding: 10px;
+  transition: background-color 0.8s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+.email-sec > #sub-but:hover {
+  background: white;
+  color: var(--logo);
+}
+/* FOOTER SECTION ENDS */
+/* SECTIONS ENDS */
+/* FOOTER */
+footer {
+  display: flex;
+  box-sizing: inherit;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  border: 2px solid rgba(30, 40, 52, 0.08);
+  box-shadow: 70px 10px 70px rgba(30, 40, 52, 0.08);
+}
