@@ -92,6 +92,59 @@
   color: black;
   border: 0.5px solid black;
 }
+
+/* HAMBURGER MENU */
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  transition: 0.3s ease-out;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgb(0, 0, 0);
+}
+/* HAMBURGER MENU END */
+
 /* NAVBAR END */
 
 /* SECTİONS START */
@@ -346,11 +399,19 @@ footer {
     box-sizing: inherit;
   }
 
+  .section1 {
+    margin-top: 5.5vw;
+  }
+
   .section1 > #meet-button {
     width: 40%;
     height: auto;
     font-size: 70%;
     box-sizing: inherit;
+  }
+
+  #handIcon {
+    font-size: 2vw;
   }
 
   .section1 > h1 {
@@ -568,5 +629,48 @@ footer {
     align-items: center;
     font-size: 50%;
   }
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 3vw;
+    top: 1vw;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 40px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-item > a {
+    color: black;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+  /* HAMBURGER MENU END */
 }
+
 /* MEDIA QUERIES END */
